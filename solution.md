@@ -117,6 +117,18 @@ ORDER BY client_id;
 
 ------------------------------------------------------------------------
 
+
+
+
+
+
+Validation Status	# of Clients	Total Expected Amount	Total Distributed Amount	Net Difference (Expected - Distributed)
+PASS	8	$39,830.49	$39,830.49	$0.00
+FAIL - DUPLICATE DISTRIBUTION	1	$44,100.00	$88,200.00	-$44,100.00
+FAIL - MISSING DISTRIBUTION	1	$2,940.00	$0.00	$2,940.00
+FAIL - AMOUNT MISMATCH	2	$4,949.74	$5,145.73	-$195.99
+FAIL - UNEXPECTED CLIENT	1	$0.00	$320.00	-$320.00
+GRAND TOTAL	13	$91,820.23	$133,496.22	
 ## Task 2
 
 ### (i) Identify clients that appear in the distribution output but have no corresponding approved transaction record
@@ -330,7 +342,7 @@ successful.
 
 
 
-
+The drawbacks of this solution is that it is running locally on my machine and everytime that there is a change, I have to manually run my scripts on Jenkins.
 
 
 
